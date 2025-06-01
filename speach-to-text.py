@@ -547,7 +547,8 @@ if __name__ == "__main__":
     # Run using Azure OpenAI
     # Run using OpenAI
     api_key = os.getenv("OPENAI_API_KEY")
-    transcript, probs = start_openai_transcription(duration=60)
+    model = os.getenv("OPENAI_TRANSCRIBE_MODEL")
+    transcript, probs = start_openai_transcription(duration=60, model=model)
 
     # Azure OpenAI Azure
     # endpoint = "<>.openai.azure.com"
